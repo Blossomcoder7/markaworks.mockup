@@ -73,7 +73,7 @@ const Drawer = forwardRef(
           onClick={handleClick}
           className={clsx(
             className,
-            `lg:hidden inline-flex items-center justify-center w-fit h-full max-h-[100svh]`
+            `lg:hidden inline-flex items-center justify-center w-fit h-screen max-h-[100svh]`
           )}
         >
           {menu}

@@ -1,20 +1,54 @@
-import logo from "/logo/brand.png";
+import logo from "/logo/brand.svg";
 import { IconButton } from "@mui/material";
 import { HiOutlineBars3 } from "react-icons/hi2";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { DrawerRefType } from "../wrapper/Drawer";
 import Drawer from "../wrapper/Drawer";
 import MagicScrollWrapper from "../animated/MagicScrollWrapper";
 import XSpacing from "../wrapper/XSpacing";
+import clsx from "clsx";
+import {
+  motion,
+  useAnimation,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
 
 const NavBar = () => {
   const drawerEl = useRef<DrawerRefType>(null);
+  const { scrollY } = useScroll();
+  const controls = useAnimation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 600);
+  });
+
+  useEffect(() => {
+    controls.start({
+      y: scrolled ? 0 : -100,
+      opacity: scrolled ? 1 : 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.77, 0, 0.175, 1],
+      },
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scrolled]);
 
   return (
     <MagicScrollWrapper>
-      <nav className=" navbar w-full lg:py-4 items-center bg-black justify-center flex   text-mw-sm">
+      <nav
+        className={clsx(
+          " navbar w-full lg:py-4 items-center relative  justify-center flex   text-mw-sm"
+        )}
+      >
+        <motion.div
+          animate={controls}
+          className="w-full h-full absolute inset-0 top-0 left-0 bg-black/80 backdrop-blur-[1px] z-1"
+        />
         <XSpacing>
-          <div className="flex items-center justify-between w-full  rounded-md  h-full">
+          <div className="flex items-center justify-between w-full relative z-2 rounded-md  h-full">
             {/* Mobile logo */}
             <div className="lg:hidden">
               <img

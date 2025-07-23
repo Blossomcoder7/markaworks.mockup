@@ -29,7 +29,7 @@ const Layout = () => {
       </div>
       <header
         style={{ minHeight: minHeight }}
-        className="w-full bg-mw-black flex items-center justify-center"
+        className="w-full bg-transparent fixed top-0 left-0 z-[999] flex items-center justify-center"
       >
         <NavBar />
       </header>

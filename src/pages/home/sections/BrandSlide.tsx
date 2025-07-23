@@ -12,8 +12,8 @@ const BrandSlide = () => {
 
   return (
     <>
-      <div className="bg-[#EAE5E3] py-4 flex flex-col justify-center items-center">
-        <p className="text-center text-[#053333] font-semibold text-lg mb-4 mt-3">
+      <div className="bg-mw-beige py-4 flex flex-col justify-center items-center">
+        <p className="text-center text-mw-green-dark  font-semibold text-lg mb-4 mt-3">
           Trusted by 500+ of the world’s top brands
         </p>
         {/* part one - left to right */}
