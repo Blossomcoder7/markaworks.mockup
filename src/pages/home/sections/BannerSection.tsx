@@ -41,10 +41,7 @@ const BannerSection = () => {
   });
   return (
     <>
-      <div
-        ref={containerEl}
-        className="relative cursor-pointer bg-mw-black  w-full h-[clamp(700px,100svh,1200px)] text-white flex justify-center items-center"
-      >
+      <div className="relative cursor-pointer bg-mw-black  w-full h-[clamp(700px,95svh,1200px)] text-white flex justify-center items-center">
         <motion.div className="absolute w-full h-full inset-0">
           <video
             src="https://www.markaworks.com/wp-content/uploads/2020/11/optimize.mp4"
@@ -56,29 +53,32 @@ const BannerSection = () => {
             className="object-cover w-full h-full"
           ></video>
         </motion.div>
-        <div className="relative cursor-pointer z-2  bg-mw-black/35  w-full h-full text-white flex justify-center items-center">
-          <motion.div
-            initial={{ opacity: 0, y: -500 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 2,
-              ease: "easeIn",
-              type: "spring",
-            }}
-            viewport={{
-              once: true,
-            }}
-            className="absolute w-full h-full z-2 inset-0 flex items-start justify-center"
-          >
-            <img
-              src={bg}
-              alt="bg"
-              className="w-10/12 h-10/12 object-contain opacity-4"
-            />
-          </motion.div>
-          <XSpacing className="h-full ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeIn",
+            type: "spring",
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="absolute w-full h-full z-2 bg-mw-black/35 inset-0 flex items-start justify-center"
+        >
+          <img
+            src={bg}
+            alt="bg"
+            className="w-10/12 h-10/12 object-contain opacity-4"
+          />
+        </motion.div>
+        <div
+          ref={containerEl}
+          className="relative cursor-pointer z-2    w-full h-[calc(100%-80px)] text-white flex justify-center items-center"
+        >
+          <XSpacing className="h-full w-full">
             <div className="w-full h-full relative z-3">
-              <div className="min-w-fit pt-4 absolute top-1/2 left-1/2 -translate-1/2 text-[80px] sm:text-[clamp(80px,9vw,180px)] 3xl:text-[clamp(130px,15vw,250px)] leading-none  font-medium">
+              <div className="min-w-fit pt-7 absolute top-1/2 left-1/2 -translate-1/2 text-[80px] sm:text-[clamp(80px,9vw,180px)] 3xl:text-[clamp(130px,15vw,250px)] leading-none  font-medium">
                 <motion.p
                   initial={{ x: -100 }}
                   whileInView={{

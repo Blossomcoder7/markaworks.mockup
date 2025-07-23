@@ -38,9 +38,10 @@ const MagicScrollWrapper = (props: MagicScrollWrapperProps) => {
             boxShadow: "none",
             backgroundColor: "transparent",
             width: "100%",
+            height: 72,
           }}
         >
-          <Toolbar style={{ padding: 0 }} sx={{ px: 0, margin: 0 }}>
+          <Toolbar style={{ padding: 0, height: 72 }} sx={{ px: 0, margin: 0 }}>
             {children}
           </Toolbar>
         </AppBar>

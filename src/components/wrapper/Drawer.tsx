@@ -105,8 +105,8 @@ const Drawer = forwardRef(
               p: 0.5,
               color: "white",
               position: "absolute",
-              top: 12,
-              right: 12,
+              top: 20,
+              right: 20,
               "&:hover": {
                 color: "red",
               },

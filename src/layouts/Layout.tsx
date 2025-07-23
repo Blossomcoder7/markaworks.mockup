@@ -2,25 +2,9 @@ import { Outlet } from "react-router";
 import ScrollIndicator from "../components/animated/ScrollIndicator";
 import NavBar from "../components/ui/NavBar";
 import useSmoothScroll from "../hooks/animated/useSmoothScroll";
-import { useEffect, useState } from "react";
 
 const Layout = () => {
   useSmoothScroll({ autoInit: true });
-  const [minHeight, setMinHeight] = useState(0);
-
-  useEffect(() => {
-    const handleHeight = () => {
-      const nav = document.querySelector(".navbar");
-      const height = nav?.clientHeight;
-      console.log({ height });
-      setMinHeight(height || 60);
-    };
-    handleHeight();
-    window.addEventListener("resize", handleHeight);
-    return () => {
-      window.removeEventListener("resize", handleHeight);
-    };
-  }, []);
 
   return (
     <>
@@ -28,12 +12,12 @@ const Layout = () => {
         <ScrollIndicator />
       </div>
       <header
-        style={{ minHeight: minHeight }}
-        className="w-full bg-transparent fixed top-0 left-0 z-[999] flex items-center justify-center"
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
+        className="w-full bg-transparent  min-h-[72px] fixed top-0 left-0 z-[999] flex items-start justify-center"
       >
         <NavBar />
       </header>
-      <main className="w-full h-auto  min-h-[600vh]">
+      <main className="w-full h-auto">
         <Outlet />
       </main>
       <footer></footer>

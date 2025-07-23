@@ -12,20 +12,20 @@ const Section4 = () => {
     <div className="flex w-full h-full items-center justify-center overflow-hidden min-h-fit relative bg-mw-beige">
       <XSpacing>
         <div className="flex relative flex-col w-full py-20 gap-20 ">
-          <div className=" relative z-1 pointer-events-none selection:bg-transparent w-full flex items-center justify-start ">
-            <p className="text-h1-m relative md:text-[65px]  md:leading-none text-mw-green-dark font-semibold">
+          <div className=" pointer-events-none selection:bg-transparent w-full flex items-center justify-start ">
+            <p className="text-h1-m  relative z-3 md:text-[65px]  md:leading-none text-mw-green-dark font-semibold">
               Everyone designs. We shape how <br /> people{" "}
               <span className="text-mw-green-light">feel your brand.</span>{" "}
             </p>
           </div>
           <div className="w-full flex justify-end items-center min-h-fit h-auto">
-            <div className=" relative z-3 flex flex-col max-w-10/12 gap-4">
-              <p className="w-full text-mw-black font-normal text-h2-m indent-32">
+            <div className="   flex flex-col max-w-10/12 gap-4">
+              <p className="w-full  relative z-3 text-mw-black font-normal text-h2-m indent-32">
                 We’re a 22-person team specialized in branding, packaging and
                 identity systems. We’ve worked on projects from boutique
                 founders to global product brands.{" "}
               </p>
-              <p className="w-full text-mw-black font-normal text-h2-m indent-32">
+              <p className="w-full  relative z-3 text-mw-black font-normal text-h2-m indent-32">
                 What we’ve built over the years is not just a portfolio it’s a
                 culture. One that has shaped standards and inspired new
                 directions in our industry.

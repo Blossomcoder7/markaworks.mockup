@@ -21,7 +21,7 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 600);
+    setScrolled(latest > 400);
   });
 
   useEffect(() => {
@@ -36,19 +36,20 @@ const NavBar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrolled]);
 
+
   return (
     <MagicScrollWrapper>
       <nav
         className={clsx(
-          " navbar w-full lg:py-4 items-center relative  justify-center flex   text-mw-sm"
+          " navbar w-full lg:py-4 items-center relative  justify-center flex   text-mw-sm overflow-hidden h-full"
         )}
       >
         <motion.div
           animate={controls}
-          className="w-full h-full absolute inset-0 top-0 left-0 bg-black/80 backdrop-blur-[1px] z-1"
+          className="w-full  absolute inset-0 top-0 left-0 bg-black/80 backdrop-blur-[1px] z-1"
         />
         <XSpacing>
-          <div className="flex items-center justify-between w-full relative z-2 rounded-md  h-full">
+          <div className="flex items-center justify-between w-full relative z-2 rounded-md  ">
             {/* Mobile logo */}
             <div className="lg:hidden">
               <img
@@ -60,7 +61,7 @@ const NavBar = () => {
               />
             </div>
             {/* Right section with Drawer/Menu */}
-            <div className="w-fit lg:w-full h-full">
+            <div className="w-fit lg:w-full h-">
               <Drawer
                 ref={drawerEl}
                 muiDrawerProps={{
@@ -83,7 +84,7 @@ const NavBar = () => {
                     <img
                       src={logo}
                       alt="logo"
-                      height={32}
+                      height={42}
                       width={170}
                       className="object-contain object-center"
                     />
@@ -108,7 +109,7 @@ const NavBar = () => {
 
                   {/* Icons */}
                   <div className="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-6">
-                    <div className="flex font-bold text-sm lg:text-base bg-[#B8D432] text-[#053333] px-6 py-2 rounded-full cursor-pointer border-2 border-transparent transition duration-200 hover:bg-transparent hover:text-[#B8D432] hover:border-[#B8D432]">
+                    <div className="flex font-bold text-sm lg:text-base bg-[#B8D432] text-[#053333] px-6 py-2 rounded-full cursor-pointer border-2 border-transparent transition duration-200  hover:text-[#B8D432] hover:border-mw-green-dark hover:bg-mw-green-dark">
                       Let’s talk
                     </div>
                   </div>
