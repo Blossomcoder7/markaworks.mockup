@@ -1,10 +1,6 @@
-
-
-
 .slide-left {
   animation: slide-left 30s ease forwards infinite;
 }
-
 
 .slide-right {
   animation: slide-right 30s ease forwards infinite;
@@ -21,3 +17,5 @@
     transform: translateX(100%);
   }
 }
+
+

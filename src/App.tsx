@@ -19,14 +19,14 @@ const App = () => {
                 </RenderWithSuspense>
               }
             />
-            <Route
+            {/* <Route
               path="about"
               element={
                 <RenderWithSuspense>
                   <HomePage />
                 </RenderWithSuspense>
               }
-            />
+            /> */}
           </Route>
         </Routes>
       </BrowserRouter>

@@ -33,7 +33,7 @@ const Layout = () => {
       >
         <NavBar />
       </header>
-      <main className="w-full h-auto   min-h-[600vh]">
+      <main className="w-full h-auto  min-h-[600vh]">
         <Outlet />
       </main>
       <footer></footer>

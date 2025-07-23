@@ -1,8 +1,7 @@
 import XSpacing from "../../../components/wrapper/XSpacing";
-import BlueHole from "../../../assets/models/StarHolo.png";
-import mw from "../../../assets/images/white-favicon.png";
+import BlueHole from "/assets/models/StarHolo.png";
+import mw from "/assets/images/white-favicon.png";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
-import { DragggableRotation } from "../../../components/animated/DragggableRotation";
 import clsx from "clsx";
 import {
   Fragment,
@@ -12,6 +11,7 @@ import {
   type HTMLAttributes,
   type RefObject,
 } from "react";
+import { DraggableRotation } from "../../../components/animated/DraggableRotation";
 
 const Cards = () => {
   const { scrollYProgress } = useScroll({});
@@ -89,7 +89,7 @@ const Cards = () => {
     }
   }, [hoveredIndex]);
   return (
-    <div className=" bg-mw-beige pb-14 flex w-full overflow-hidden flex-col relative">
+    <div className=" bg-mw-beige py-14 flex w-full overflow-hidden flex-col relative">
       {/* Top Section */}
       <XSpacing className="gap-3">
         <div
@@ -166,13 +166,13 @@ const Cards = () => {
                     }}
                     className=" flex w-full h-full justify-center items-center relative z-2"
                   >
-                    <DragggableRotation sensitivity={1}>
+                    <DraggableRotation sensitivity={1}>
                       <img
                         src={BlueHole}
                         alt="BlueHole"
                         className="h-[200px] lg:h-[298px] w-[200px] lg:w-[298px] object-contain"
                       />
-                    </DragggableRotation>
+                    </DraggableRotation>
                   </motion.div>
                 </div>
               </div>

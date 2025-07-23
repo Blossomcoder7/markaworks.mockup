@@ -1,6 +1,6 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import start from "../../../assets/images/Stat.png";
-import ceo from "../../../assets/images/ceo.png";
+import start from "/assets/images/Stat.png";
+import ceo from "/assets/images/ceo.png";
 import XSpacing from "../../../components/wrapper/XSpacing";
 import AnimatedText from "../../../components/animated/AnimatedText";
 import { useEffect, useRef, useState } from "react";

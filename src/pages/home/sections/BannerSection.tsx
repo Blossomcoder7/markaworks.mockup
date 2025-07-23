@@ -3,7 +3,7 @@ import Character from "../../../components/animated/Character";
 import { motion, MotionValue, useTransform, useVelocity } from "motion/react";
 import useFollowMouseLocation from "../../../hooks/animated/useFollowMouseLocation";
 import XSpacing from "../../../components/wrapper/XSpacing";
-import bg from "../../../assets/images/white-favicon.png";
+import bg from "/assets/images/white-favicon.png";
 import useScreenSize from "../../../hooks/animated/useScreenSize";
 const BannerSection = () => {
   const containerEl = useRef<HTMLDivElement>(null);
@@ -43,7 +43,7 @@ const BannerSection = () => {
     <>
       <div
         ref={containerEl}
-        className="relative cursor-pointer bg-mw-black w-full h-[clamp(550px,95vh,750px)] text-white flex justify-center items-center"
+        className="relative cursor-pointer bg-mw-black w-full h-[clamp(660px,95svh,1200px)] text-white flex justify-center items-center"
       >
         <motion.div
           initial={{ opacity: 0, y: -500 }}
@@ -66,7 +66,7 @@ const BannerSection = () => {
         </motion.div>
         <XSpacing className="h-full ">
           <div className="w-full h-full relative z-2">
-            <div className="min-w-fit absolute top-1/2 left-1/2 -translate-1/2 text-[80px] sm:text-[clamp(80px,9vw,180px)] leading-none  font-medium">
+            <div className="min-w-fit absolute top-1/2 left-1/2 -translate-1/2 text-[80px] sm:text-[clamp(80px,9vw,180px)] 3xl:text-[clamp(130px,15vw,250px)] leading-none  font-medium">
               <motion.p
                 initial={{ x: -100 }}
                 whileInView={{

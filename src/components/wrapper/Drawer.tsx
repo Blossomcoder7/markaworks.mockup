@@ -73,7 +73,7 @@ const Drawer = forwardRef(
           onClick={handleClick}
           className={clsx(
             className,
-            `lg:hidden inline-flex items-center justify-center w-fit h-full`
+            `lg:hidden inline-flex items-center justify-center w-fit h-full max-h-[100svh]`
           )}
         >
           {menu}
@@ -119,7 +119,7 @@ const Drawer = forwardRef(
             ref={paperRef}
             className="w-full h-screen max-h-[100svh] overflow-auto flex flex-col py-10 bg-mw-green-dark"
           >
-            <div className="min-h-fit flex flex-col w-full">{children}</div>
+            <div className="min-h-fit flex flex-col w-full ">{children}</div>
           </div>
         </MUIDrawer>
       </>

@@ -1,11 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Typewriter from "typewriter-effect";
-import image from "../../../assets/images/image.png";
-import image1 from "../../../assets/images/image1.png";
-import image2 from "../../../assets/images/image2.png";
-import image3 from "../../../assets/images/image3.png";
-import image4 from "../../../assets/images/image4.png";
+import image from "/assets/images/image.png";
+import image1 from "/assets/images/image1.png";
+import image2 from "/assets/images/image2.png";
+import image3 from "/assets/images/image3.png";
+import image4 from "/assets/images/image4.png";
 import "swiper/swiper-bundle.css";
 import { motion } from "motion/react";
 import { useRef, useState } from "react";
@@ -170,7 +170,7 @@ const SlideComponent = ({ card }: { card: Slide }) => {
         <img
           src={card.image}
           alt="reviewer"
-          className="h-[300px] w-[300px] object-cover rounded-xl shadow-md"
+          className=" object-cover rounded-xl shadow-md"
         />
       </div>
     </>

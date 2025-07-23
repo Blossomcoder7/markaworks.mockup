@@ -48,6 +48,7 @@ export default {
         mobile: "480px",
         "3xl": "1600px",
         "4xl": "2000px",
+        "5xl": "2400px",
       },
     },
   },

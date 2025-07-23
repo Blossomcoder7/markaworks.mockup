@@ -1,16 +1,16 @@
 import { FaArrowRight } from "react-icons/fa";
-import image1 from "../../../assets/images/image-1.png";
-import image2 from "../../../assets/images/image-2.png";
-import image3 from "../../../assets/images/image-3.png";
-import image4 from "../../../assets/images/image-4.png";
-import image5 from "../../../assets/images/image-5.png";
-import image6 from "../../../assets/images/image-6.png";
+import image1 from "/assets/images/image-1.png";
+import image2 from "/assets/images/image-2.png";
+import image3 from "/assets/images/image-3.png";
+import image4 from "/assets/images/image-4.png";
+import image5 from "/assets/images/image-5.png";
+import image6 from "/assets/images/image-6.png";
 import XSpacing from "../../../components/wrapper/XSpacing";
 import { useRef, useState, type SetStateAction } from "react";
 import useFollowMouseLocation from "../../../hooks/animated/useFollowMouseLocation";
 import { motion } from "motion/react";
 import Character from "../../../components/animated/Character";
-import bottle from "../../../assets/models/bottle.png"
+import bottle from "/assets/models/bottle.png"
 
 interface Cards {
   id: number;
