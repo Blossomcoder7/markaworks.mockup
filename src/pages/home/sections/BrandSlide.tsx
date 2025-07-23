@@ -11,13 +11,13 @@ const BrandSlide = () => {
   ];
 
   return (
-    <div>
+    <>
       <div className="bg-[#EAE5E3] py-4 flex flex-col justify-center items-center">
         <p className="text-center text-[#053333] font-semibold text-lg mb-4 mt-3">
           Trusted by 500+ of the world’s top brands
         </p>
         {/* part one - left to right */}
-        <div className="flex flex-col w-full min-h-fit relative max-w-[200rem]">
+        <div className="flex flex-col w-full min-h-fit relative max-w-[200rem] overflow-hidden">
           {/* Left Gradient Overlay */}
           <div className="hidden 5xl:block absolute inset-y-0 left-0 w-1/3 pointer-events-none z-10">
             <div className="h-full w-full bg-gradient-to-r from-mw-beige via-mw-beige/70 to-mw-beige/0" />
@@ -61,7 +61,7 @@ const BrandSlide = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
