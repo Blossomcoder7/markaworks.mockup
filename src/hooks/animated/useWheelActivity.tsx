@@ -17,7 +17,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function useWheelActivity(threshold = 200, skip = 1) {
   const [isScrolling, setIsScrolling] = useState(false);
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
+  const scrollTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const onScroll = (e: WheelEvent) => {
