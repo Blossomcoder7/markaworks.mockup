@@ -39,6 +39,7 @@ const BannerSection = () => {
   const scale = useTransform(speed, [0, 1000], [1, 1.5], {
     clamp: true,
   });
+  
   return (
     <>
       <div className="relative cursor-pointer bg-mw-black  w-full h-[clamp(700px,95svh,1200px)] text-white flex justify-center items-center">

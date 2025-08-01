@@ -157,3 +157,4 @@ export function useScrollerProxyUpdate(
   });
   ScrollTrigger.refresh();
 }
+

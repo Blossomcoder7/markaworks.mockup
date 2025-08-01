@@ -88,6 +88,7 @@ const Cards = () => {
       });
     }
   }, [hoveredIndex]);
+  
   return (
     <div className=" bg-mw-beige py-14 flex w-full overflow-hidden flex-col relative">
       {/* Top Section */}
